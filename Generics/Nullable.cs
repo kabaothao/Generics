@@ -3,31 +3,16 @@
 
 namespace Generics // Note: actual namespace depends on the project name.
 {
-    public partial class Utilities<T> where T : IComparable<T>
-    {
-
-
-
-        //where T : IComparable
-        //where T : Product
-        //where T : struct
-        //where T : class
-        //where T : new()
-
-        public int Max(int a, int b)
+    public class Nullable<T> where T : struct
         {
-            return a > b ? a : b;
-        }
+            //what is this use for? value types cannot be null. we wil use this class to give values to be nullable
 
-        public T Max<T>(T a, T b)
+
+        public Nullable(T value)
         {
-            return a.CompareTo(b) > 0 ? a : b;
+
         }
-
-
-    }
-
-
+        
 
 }
 

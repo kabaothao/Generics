@@ -3,31 +3,17 @@
 
 namespace Generics // Note: actual namespace depends on the project name.
 {
-    public partial class Utilities<T> where T : IComparable<T>
-    {
-
-
-
-        //where T : IComparable
-        //where T : Product
-        //where T : struct
-        //where T : class
-        //where T : new()
-
-        public int Max(int a, int b)
+    public class DiscountCalculator<TProduct> where TProduct : TProduct
         {
-            return a > b ? a : b;
+                public float CalculateDiscount(TProduct product)
+            {
+                    return product.Price;
+            }
+
+
+
+
         }
-
-        public T Max<T>(T a, T b)
-        {
-            return a.CompareTo(b) > 0 ? a : b;
-        }
-
-
-    }
-
-
 
 }
 
