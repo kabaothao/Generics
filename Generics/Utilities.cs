@@ -1,37 +1,25 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
 
-using System;
-
 namespace Generics // Note: actual namespace depends on the project name.
 {
-    internal class Program
+    public class Utilities
     {
-        static void Main(string[] args)
+        public int Max(int a, int b)
         {
-            var book = new Book { Isbn = '1111', Title = "C# Advanced" };
+            return a > b ? a : b;
+        }
 
-            //var numbers = new List();
-            //numbers.Add(10);
-
-            //var books = new BookList();
-            //books.Add(book);
-
-            var numbers = new GenericList<int>();
-            numbers.Add(10);
-
-            var books = new GenericList<Book>();
-            books.Add(new BookList());
+        public T Max<T>(T a, T b) where T : IComparable
+        {
+            return a.CompareTo(b) > 0 ? a : b;
         }
 
 
-        //System.Collections.Generic.
-
-        var dictionary = new GenericDictionary<string, Book>();
-        dictionary.Add("123", new Book());
-
-
     }
+
+
+
 }
 
 /*

@@ -18,7 +18,15 @@ namespace Generics
         {
             get { throw new NotImplementedException(); 
         }
+            
 
+        public class GenericDictionary<Tkey, TValue>
+        {
+            public void Add(Tkey key, TValue value)
+            {
+
+            }
+        }
 
         public class GenericList<T> //T short for type or template
         {
