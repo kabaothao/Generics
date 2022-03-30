@@ -8,27 +8,17 @@ namespace Generics // Note: actual namespace depends on the project name.
     internal class Program
     {
         static void Main(string[] args)
-        {
-            var book = new Book { Isbn = '1111', Title = "C# Advanced" };
+        {   
 
-            //var numbers = new List();
-            //numbers.Add(10);
+            //you can find in system.null
 
-            //var books = new BookList();
-            //books.Add(book);
+            var number = new Nullable<int>(5);
+            Console.WriteLine("Has Value ? " + number.HasValue);
+            Console.WriteLine("Value: " + number.GetValueOrDefault());
 
-            var numbers = new GenericList<int>();
-            numbers.Add(10);
 
-            var books = new GenericList<Book>();
-            books.Add(new BookList());
         }
-
-
-        //System.Collections.Generic.
-
-        var dictionary = new GenericDictionary<string, Book>();
-        dictionary.Add("123", new Book());
+           
 
 
     }

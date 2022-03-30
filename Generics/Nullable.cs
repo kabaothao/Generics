@@ -3,16 +3,40 @@
 
 namespace Generics // Note: actual namespace depends on the project name.
 {
-    public class Nullable<T> where T : struct
-        {
-            //what is this use for? value types cannot be null. we wil use this class to give values to be nullable
+    public class Nullable<T> where T : struct //So this nullable is using a constraint to specify that T has to be a value type.
+    {
+        
+         //what is this use for? value types cannot be null. we wil use this class to give values to be nullable
 
+        private object _value;
 
-        public Nullable(T value)
+        public Nullable()
         {
 
         }
+        public Nullable(T value)
+        {
+            _value = value;
+        }
+
+        public bool HasValue
+        {
+            get { return _value != null; }
+
+        }
         
+
+        public T GetValueOrDefault()
+        {
+            if (HasValue)
+                return (T)_value;
+
+            return default(T);
+        }
+
+
+    }
+
 
 }
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Generics
 {
     public class BookList
-    {   
+    {
         public void Add(Book book)
         {
             throw new NotImplementedException();
@@ -16,9 +16,10 @@ namespace Generics
 
         public Book this[int index]
         {
-            get { throw new NotImplementedException(); 
+            get { throw new NotImplementedException(); }
         }
-            
+
+
 
         public class GenericDictionary<Tkey, TValue>
         {
@@ -34,12 +35,12 @@ namespace Generics
             {
 
             }
+
             public T this[int index]
             {
-                get { throw new NotImplementedException();
+                get { throw new NotImplementedException(); }
             }
+
         }
-
-
     }
 }

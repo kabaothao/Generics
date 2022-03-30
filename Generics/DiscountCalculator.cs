@@ -3,17 +3,17 @@
 
 namespace Generics // Note: actual namespace depends on the project name.
 {
-    public class DiscountCalculator<TProduct> where TProduct : TProduct
+    public class DiscountCalculator<TProduct> where TProduct : Product //So with that constraint when we say T product should be a product or any of its subclasses we have access to all of its properties or methods here.
+    {
+        public float CalculateDiscount(TProduct product)
         {
-                public float CalculateDiscount(TProduct product)
-            {
-                    return product.Price;
-            }
-
-
-
-
+          return product.Price;
         }
+
+
+
+
+    }
 
 }
 

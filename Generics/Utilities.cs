@@ -3,7 +3,7 @@
 
 namespace Generics // Note: actual namespace depends on the project name.
 {
-    public partial class Utilities<T> where T : IComparable<T>
+    public class Utilities<T> where T : IComparable, new() //So what you can do is to apply a second constraint here. You can separate constraints with the comma.
     {
 
 
@@ -19,7 +19,16 @@ namespace Generics // Note: actual namespace depends on the project name.
             return a > b ? a : b;
         }
 
-        public T Max<T>(T a, T b)
+
+        public void DoSomething(T value)
+        {
+            //ow let's say in some specific scenarios we want to instantiate an instance of T.So if you want to create an object you want to do something like that.
+
+            var obj = new T();
+        }
+
+
+        public T Max(T a, T b)
         {
             return a.CompareTo(b) > 0 ? a : b;
         }
