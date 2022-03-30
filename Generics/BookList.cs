@@ -16,20 +16,19 @@ namespace Generics
 
         public Book this[int index]
         {
-            get { throw new NotImplementedException(); }
+            get { throw new NotImplementedException(); 
         }
 
 
-        public class ObjectList
+        public class GenericList<T> //T short for type or template
         {
-            public void Add(object value)
+            public void Add(T value)
             {
 
             }
-
-            public object this[int index]
+            public T this[int index]
             {
-                get { throw new NotImplementedException(); }
+                get { throw new NotImplementedException();
             }
         }
 
